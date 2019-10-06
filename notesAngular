@@ -1,4 +1,64 @@
-there are three ways to add selector in for templates=>
+there are three ways to modify selector in @component directive in ts file of component=>
 1=>First is only selector name[selector : 'app-test']=><app-test></app-test>
 2=>Selector as a class name [selector : '.app-test']=><div class='app-test'></div>
 3=>Selector as a property [selector : 'app-test']=><div app-test></div>
+=======================================================================================
+There are spome ways to modify template property in @component directive in ts file of component=>
+1=>for saprate template:- use templateUrl and provide url inside single quote.
+@Component({
+  selector: 'app-test',
+  templateUrl: './test.component.html',//in this way
+  styleUrls: ['./test.component.css']
+})
+
+2=>spacify template inline[define template in same .ts file](use only --template-- keyword insted of templateUrl and define HTML inside '' single quotes)
+@Component({
+  selector: '[app-test]',
+  template: '<h1>how are you gueys</h1>',//in this way
+  styleUrls: ['./test.component.css']
+})
+
+3=>spacify template inline with more lines[define template in same .ts file](use only --template-- keyword insted of templateUrl and define HTML inside ``)(use backtick multiple line of html code)
+@Component({
+  selector: '[app-test]',
+  template: `<h1>how are you gueys</h1>`,//in this way
+  styleUrls: ['./test.component.css']
+})
+================================================================================================
+There are following way to add styles with the component 
+
+1=>for saprate css file we have to use styleUrls property(its an array)and provoid some value[it will be url] inside '' single qutoe.
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']//in this way
+})
+
+2=>for inline css we have to use styles property(its an array)and provoid some value[it will be css code] inside `` backtick (because it is multiple line of css code).
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styles: [`<h2>
+            this is my code
+            </<h2>`]
+            //in this way
+})
+
+===================================================================================================
+Interpolation:-
+by using interpolation we can show any value in template which is coming from the controler class.
+for interpollation we can use {{ }} double curly brackats .
+There are some way to use interpollation
+              Welcome {{user}}'<!--first case of interpolation-->
+              <br>
+              {{'Welcome' + user}}<!--second case of interpolation-->
+              <br>
+              {{4 + 5}}<!--third case of interpolation[we can do expression calculation inside interpolation]-->
+              <br>
+              
+              <!--we can use js predefined function and keywords-->
+              {{user.length}}<!--use of javascript predefined keywords-->
+              <br>
+              {{user.toUpperCase()}}<!--use of javascript predefined methods-->
+              <br>
+              {{greetUser()}}<!--we can call any method which exist in a ts file-->
