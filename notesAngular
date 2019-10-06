@@ -49,16 +49,15 @@ Interpolation:-
 by using interpolation we can show any value in template which is coming from the controler class.
 for interpollation we can use {{ }} double curly brackats .
 There are some way to use interpollation
-              Welcome {{user}}'<!--first case of interpolation-->
-              <br>
-              {{'Welcome' + user}}<!--second case of interpolation-->
-              <br>
-              {{4 + 5}}<!--third case of interpolation[we can do expression calculation inside interpolation]-->
-              <br>
+            1=>  Welcome {{user}}'<!--first case of interpolation-->
               
-              <!--we can use js predefined function and keywords-->
-              {{user.length}}<!--use of javascript predefined keywords-->
-              <br>
-              {{user.toUpperCase()}}<!--use of javascript predefined methods-->
-              <br>
-              {{greetUser()}}<!--we can call any method which exist in a ts file-->
+            2=> {{'Welcome' + user}}<!--second case of interpolation-->
+              
+            3=>  {{4 + 5}}<!--third case of interpolation[we can do expression calculation inside interpolation]-->
+             
+                <!--we can use js predefined function and keywords-->
+            4=>  {{user.length}}<!--use of javascript predefined keywords-->
+              
+            5=>  {{user.toUpperCase()}}<!--use of javascript predefined methods-->
+              
+            6=>  {{greetUser()}}<!--we can call any method which exist in a ts file-->
