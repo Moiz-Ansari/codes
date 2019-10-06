@@ -1,4 +1,4 @@
 there are three ways to add selector in for templates=>
 1=>First is only selector name[selector : 'app-test']=><app-test></app-test>
 2=>Selector as a class name [selector : '.app-test']=><div class='app-test'></div>
-3=>Selector as a property [selector : '']
+3=>Selector as a property [selector : 'app-test']=><div app-test></div>
