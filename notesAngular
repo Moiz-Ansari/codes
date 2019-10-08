@@ -61,3 +61,40 @@ There are some way to use interpollation
             5=>  {{user.toUpperCase()}}<!--use of javascript predefined methods-->
               
             6=>  {{greetUser()}}<!--we can call any method which exist in a ts file-->
+            
+ ==================================================================================================
+ property binding:-
+            <div style="color:yellow">
+              <input [disabled]='user' [type]="text" [value]="user">
+            </div>
+            
+            use dom property inside [] and asign a value to it directly or throw a variable
+            
+ ==================================================================================================
+ class binding:-
+ way 1=> simple way of assignment of class
+  <p class="text-success">my project</p>
+ 
+ way 2=> assign classname dynamically
+  <p [class]="className">my project</p>
+  in ts
+  public className=""text-success"
+  
+  
+ way 3=> use a class one basis of flag variable[conditionaly apply single class]
+  <p [class.className]="flag_hasError">my project</p>
+  in ts
+  public flage_hasError=true
+ 
+way 4=>conditionaly apply multiple classes 
+<p [ngClass]="clasess">myii project</p><!--forth way to use multiple classes on single element on basis of some flag variable(by using object)-->
+in ts file
+public clasess={
+    "text-danger" : true,
+    "text-special" : true,
+    "text-success" : true
+
+  }
+
+
+
