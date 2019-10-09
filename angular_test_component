@@ -1,1 +1,16 @@
-
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'">this is case red</div>
+    <div *ngSwitchCase="'blue'">this is case red</div>
+    <div *ngSwitchCase="'green'">this is case red</div>
+    <div *ngSwitchDefault>provide a color</div>
+  </div>
+  <div *ngFor="let color of colors; index as i">
+    <h2>{{color}}{{i}}{{i+1}}</h2>
+  </div>
+  
+  
+  inside class
+  
+  public colors= ['red','blue','green','yellow'];
+  public color='red';
+ 
